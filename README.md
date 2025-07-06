@@ -59,3 +59,9 @@ Google Material Symbols: Integrated for scalable and visually appealing icons th
 * User Experience:
 The application prioritizes a clean, uncluttered user interface. The sidebar provides quick navigation between books and their notes, while the main content area dynamically switches between welcome messages, book details, note editing, and note viewing modes. Responsive design ensures a consistent experience across desktop and mobile devices.
 
+Output :
+<img width="1892" height="1033" alt="Image" src="https://github.com/user-attachments/assets/8f40acaf-9767-4a91-9627-1cfab1b9a001" />
+
+<img width="1893" height="1030" alt="Image" src="https://github.com/user-attachments/assets/cbcc6850-28db-4d45-b8b0-b99efb80748c" />
+
+<img width="1892" height="1028" alt="Image" src="https://github.com/user-attachments/assets/3d68c42a-020b-475d-a393-3502b849bbe9" />
