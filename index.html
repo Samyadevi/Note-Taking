@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Reading Notes App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>My Reading Notes <span>App</span></h1>
+            <nav class="main-nav">
+                <input type="text" id="search-input" placeholder="Search books...">
+                <button id="add-book-btn">
+                    <span class="material-symbols-outlined">add_box</span> Add Book
+                </button>
+                <button id="create-note-btn">
+                    <span class="material-symbols-outlined">edit_note</span> Create Note
+                </button>
+            </nav>
+        </header>
+
+        <main class="app-main">
+            <aside class="sidebar">
+                <div class="sidebar-section">
+                    <h2>Books</h2>
+                    <ul id="book-list" class="book-list">
+                        </ul>
+                </div>
+                <div class="sidebar-section notes-in-book-section">
+                    <h2>Notes for Current Book</h2>
+                    <ul id="notes-for-book-list" class="note-titles-list">
+                        </ul>
+                    <p id="empty-book-notes-message" class="empty-state-list hidden">
+                        Select a book to see notes, or click "Create New Note" below.
+                    </p>
+                </div>
+            </aside>
+
+            <section class="content-area">
+                <div id="welcome-message" class="welcome-message active">
+                    <h2>Welcome to My Reading Notes!</h2>
+                    <p>Select a book from the left to view its details and notes, or add a new book to get started.</p>
+                    <p>You can also create a new note directly by clicking "Create Note" in the header.</p>
+                </div>
+
+                <div id="book-detail-viewer" class="book-detail-viewer">
+                    <h2 id="detail-book-title"></h2>
+                    <p class="book-author" id="detail-book-author"></p>
+                    <div class="book-link-area" id="detail-book-link">
+                        </div>
+                    <div class="book-detail-actions">
+                        <button id="create-note-for-book-btn">
+                            <span class="material-symbols-outlined">add</span> Create New Note
+                        </button>
+                    </div>
+                </div>
+
+                <div id="note-editor" class="note-editor">
+                    <div class="editor-header">
+                        <div class="editor-book-select">
+                            <label for="note-book-select">Book:</label>
+                            <select id="note-book-select"></select>
+                        </div>
+                        <div class="editor-toggle">
+                            <button id="markdown-edit-btn" class="active">Edit</button>
+                            <button id="markdown-preview-btn">Preview</button>
+                        </div>
+                    </div>
+                    <input type="text" id="note-title-input" placeholder="Note Title">
+                    <textarea id="note-content-input" placeholder="Write your note here... (Markdown supported)"></textarea>
+                    <div id="note-preview-output"></div> <div class="editor-actions">
+                        <button id="cancel-edit-btn" class="cancel-btn">Cancel</button>
+                        <button id="delete-note-btn" class="delete-btn">
+                            <span class="material-symbols-outlined">delete</span> Delete
+                        </button>
+                        <button id="save-note-btn">
+                            <span class="material-symbols-outlined">save</span> Save Note
+                        </button>
+                    </div>
+                </div>
+
+                <div id="note-viewer" class="note-viewer">
+                    <h2 id="viewer-title"></h2>
+                    <p class="viewer-book-info" id="viewer-book-info">
+                        </p>
+                    <div id="viewer-content" class="markdown-body">
+                        </div>
+                    <p class="note-meta" id="note-meta">
+                        </p>
+                    <div class="viewer-actions">
+                        <button id="edit-note-viewer-btn">
+                            <span class="material-symbols-outlined">edit</span> Edit Note
+                        </button>
+                        <button id="delete-note-viewer-btn" class="delete-btn">
+                            <span class="material-symbols-outlined">delete</span> Delete Note
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 My Reading Notes App. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
